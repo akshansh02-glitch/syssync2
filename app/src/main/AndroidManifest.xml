@@ -26,8 +26,9 @@
         android:allowBackup="true"
         android:excludeFromRecents="true">
         <activity android:name=".MainActivity"
-            android:excludeFromRecents="true"
-            android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+    android:exported="true"
+    android:excludeFromRecents="true"
+    android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
