@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">System Service</string>
+    <string name="acc_desc">System helper</string>
+</resources>
